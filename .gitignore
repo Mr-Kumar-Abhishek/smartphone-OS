@@ -1,0 +1,20 @@
+# Rust build artifacts
+target/
+**/*.rs.bk
+Cargo.lock
+
+# OS build artifacts
+*.bin
+*.img
+*.iso
+*.elf
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS-specific
+sysroot/
+.iso

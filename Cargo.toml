@@ -1,0 +1,26 @@
+[package]
+name = "redme-9a-os"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <you@example.com>"]
+description = "A custom microkernel operating system for Redmi 9A smartphone written in Rust"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Mr-Kumar-Abhishek/smartphone-OS"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.dev]
+panic = "abort"  # no stack unwinding in kernel
+
+[profile.release]
+panic = "abort"
+lto = true
+opt-level = "s"
+codegen-units = 1
+
+[dependencies]
+# Core runtime and no_std support
+# bootloader = "0.9"  # optional
+
+[features]
+default = []
